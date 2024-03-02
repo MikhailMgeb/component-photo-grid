@@ -9,9 +9,9 @@ export type dataSrcType =
         height: number;
         color: string;
         blur_hash: string;
-        description: string;
+        description: string | null;
         alt_description: string;
-        breadcrumbs: [];
+        breadcrumbs: string[];
         urls: {
             raw: string;
             full: string;
@@ -28,9 +28,9 @@ export type dataSrcType =
         },
         likes: 62,
         liked_by_user: boolean;
-        current_user_collections: [],
+        current_user_collections: string[],
         sponsorship: {
-            impression_urls: [],
+            impression_urls: string[],
             tagline: string;
             tagline_url: string;
             sponsor: {

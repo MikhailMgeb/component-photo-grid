@@ -2,16 +2,18 @@ import React from 'react';
 
 import './App.css';
 import PhotoContainer from './PhotoContainer/PhotoContainer';
-import dataImage from './data.json'
+import dataImage from './data.json';
 
+const urlsImage: string[] = [];
 
-console.log(dataImage)
+dataImage.map(item => {
+  urlsImage.push(item.urls.small);
+});
 
 const App = () => {
-
   return (
     <div className="App">
-      <PhotoContainer srcImages={dataImage} />
+      <PhotoContainer urls={urlsImage} />
     </div>
   );
 }
